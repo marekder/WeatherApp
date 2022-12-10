@@ -6,10 +6,10 @@
 
 body {
     @include breakpoint("large") {
-        background-color: blue;
+        background-color: #c1c1db8f;
     }
 
     @include breakpoint("wide") {
-        background-color: red;
+        background-color: #cdb3b38a;
     }
 }
