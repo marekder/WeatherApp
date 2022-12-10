@@ -7,3 +7,5 @@ Technology stack:
 - SASS
 - CSS
 - JS
+
+Project live: [WeatherApp](https://marekder.github.io/WeatherApp/)
