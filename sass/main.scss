@@ -4,12 +4,12 @@
 @import "mixins";
 @import "base";
 
-body {
-    @include breakpoint("large") {
-        background-color: #c1c1db8f;
-    }
+// body {
+//     @include breakpoint("large") {
+//         background-color: #c1c1db8f;
+//     }
 
-    @include breakpoint("wide") {
-        background-color: #cdb3b38a;
-    }
-}
+//     @include breakpoint("wide") {
+//         background-color: #cdb3b38a;
+//     }
+// }
