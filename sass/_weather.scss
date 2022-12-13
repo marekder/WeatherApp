@@ -1,0 +1,14 @@
+.weather {
+    min-height: 100vh;
+
+    &__bg {
+        position: fixed;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        object-fit: cover;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
