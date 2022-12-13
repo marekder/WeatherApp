@@ -2,15 +2,35 @@
 <html lang="en">
 
 <head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Rubik+Gemstones&display=swap"
+    rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starter</title>
+  <title>Weather APP</title>
   <script type="module" crossorigin src="./assets/index.4c7cbd7e.js"></script>
-  <link rel="stylesheet" href="./assets/index.ae02eeeb.css">
+  <link rel="stylesheet" href="./assets/index.770ce65e.css">
 </head>
 
 <body>
-  <h1>WeatherAPP</h1>
+  <!-- BEM -->
+  <!-- Block -->
+  <section class="weather">
+    <!-- Element -->
+    <video src="./video/landscape.mp4" autoplay muted loop playsinline class="weather__bg"></video>
+    <!-- playsinline potrzebne dla Maca -->
+    <h1 class="weather__title">Weather APP</h1>
+    <form action="" class="weather__form">
+      <input type="text" class="weather__city">
+    </form>
+  </section>
 
 
 
