@@ -22,6 +22,24 @@ cityForm.addEventListener('submit', (event) => {
                 let view = ''
                 // view += `<b>${dataFromAPI.current.temp_c}</b>`
                 view += `<div class="weather__location">City: ${dataFromAPI.location.name} - Country: ${dataFromAPI.location.country}</div>`
+                view += `<div class="weather__info">`
+                //icon
+                    view += `<div class="weather__icon">
+                        <img src="${dataFromAPI.current.condition.icon}" alt="${dataFromAPI.current.condition.text}">
+                    </div>`
+                //temp
+                    view += `<div class="weather__temp">
+                        <span class="weather__num">${dataFromAPI.current.temp_c}</span>
+                        <span class="weather__unit">&deg;</span>
+                        <span class="weather__deg">C</span>
+                    </div>`
+
+                    view += `<div class="weather__desc">
+                        <p class="weather__text">The amount of rainfall: ${dataFromAPI.current.precip_mm} mm</p>
+                        <p class="weather__">Current humidity: ${dataFromAPI.current.humidity}%</p>
+                        <p class="weather__">Current wind: ${dataFromAPI.current.wind_kph}kph</p>
+                    </div>`
+                view += `</div>`
 
                 apiView.innerHTML = view
             })
