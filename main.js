@@ -57,3 +57,7 @@ cityInput.addEventListener('keyup', () => {
         cityInput.classList.remove('weather__city--error')
     }
 })
+
+let showError = () => {
+    apiView.innerHTML = `<div class="weather__error">City not found or we have problem with API</div>`
+}
