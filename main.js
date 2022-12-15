@@ -36,8 +36,8 @@ cityForm.addEventListener('submit', (event) => {
 
                     view += `<div class="weather__desc">
                         <p class="weather__text">The amount of rainfall: ${dataFromAPI.current.precip_mm} mm</p>
-                        <p class="weather__">Current humidity: ${dataFromAPI.current.humidity}%</p>
-                        <p class="weather__">Current wind: ${dataFromAPI.current.wind_kph}kph</p>
+                        <p class="weather__text">Current humidity: ${dataFromAPI.current.humidity}%</p>
+                        <p class="weather__text">Current wind: ${dataFromAPI.current.wind_kph}kph</p>
                     </div>`
                 view += `</div>`
 
