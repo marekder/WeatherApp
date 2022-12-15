@@ -4,6 +4,8 @@ let cityForm = document.querySelector('.weather__form')
 let cityInput = document.querySelector('.weather__city')
 let APIURL = 'http://api.weatherapi.com/v1/current.json?key=d65612371be147b590e171953221512&aqi=yes&q='
 let apiView = document.querySelector('.weather__data')
+let video = document.querySelector('.weather__bg')
+let loader = document.querySelector('.weather__loader')
 
 cityForm.addEventListener('submit', (event) => {
     let city = cityInput.value
@@ -11,12 +13,21 @@ cityForm.addEventListener('submit', (event) => {
     if (city.length <= 3) {
         cityInput.classList.add('weather__city--error')
     } else {
+        showLoader()
 
         cityInput.classList.remove('weather__city--error')
 
         let APIURLWITHCITY = APIURL + city
         fetch(APIURLWITHCITY)
-            .then((response) => response.json())
+            .then((response) => {
+                hideLoader()
+                if(response.status === 200){
+                    return response.json()}
+                else{
+                    return showError()
+                }
+                
+            })
             .then((dataFromAPI) => {
                 // console.log(dataFromAP.current.temp_c)
                 let view = ''
@@ -42,6 +53,9 @@ cityForm.addEventListener('submit', (event) => {
                 view += `</div>`
 
                 apiView.innerHTML = view
+
+                // video.setAttribute('src', '/video/' + dataFromAPI.current.condition.code + '.mp4')
+                // video.play()
             })
         // console.log(APIURLWITHCITY)
     }
@@ -60,4 +74,12 @@ cityInput.addEventListener('keyup', () => {
 
 let showError = () => {
     apiView.innerHTML = `<div class="weather__error">City not found or we have problem with API</div>`
+}
+
+let showLoader = () => {
+    loader.style.display = 'block'
+}
+
+let hideLoader = () => {
+    loader.style.display = 'none'
 }

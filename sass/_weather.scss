@@ -95,4 +95,16 @@
         }
     }
 
+    &__error {
+        border-radius: 10px;
+        padding: 10px;
+        color: #fff;
+        background-color: $inputBorderColorError;
+        font-weight: 700;
+    }
+
+    &__loader {
+        display: none;
+    }
+
 }
