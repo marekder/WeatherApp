@@ -15,8 +15,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather APP</title>
-  <script type="module" crossorigin src="./assets/index.4c7cbd7e.js"></script>
-  <link rel="stylesheet" href="./assets/index.770ce65e.css">
+  <script type="module" crossorigin src="./assets/index.63140284.js"></script>
+  <link rel="stylesheet" href="./assets/index.b33137c5.css">
 </head>
 
 <body>
@@ -27,9 +27,17 @@
     <video src="./video/landscape.mp4" autoplay muted loop playsinline class="weather__bg"></video>
     <!-- playsinline potrzebne dla Maca -->
     <h1 class="weather__title">Weather APP</h1>
+    <div class="weather__loader">
+      <div class="lds-ripple"><div></div><div></div></div>
+    </div>
     <form action="" class="weather__form">
-      <input type="text" class="weather__city">
+      <input type="text" class="weather__city" value="London">
     </form>
+
+    <!-- Data from API -->
+    <div class="weather__data">
+
+    </div>
   </section>
 
 
