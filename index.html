@@ -14,6 +14,7 @@
     rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Weather APP</title>
 </head>
 
@@ -26,7 +27,10 @@
     <!-- playsinline potrzebne dla Maca -->
     <h1 class="weather__title">Weather APP</h1>
     <div class="weather__loader">
-      <div class="lds-ripple"><div></div><div></div></div>
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
     </div>
     <form action="" class="weather__form">
       <input type="text" class="weather__city" value="London">
