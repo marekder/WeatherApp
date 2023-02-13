@@ -6,7 +6,7 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  base: "",
+  base: "/tweak/",
   build: {
     outDir: "./docs",
   },
