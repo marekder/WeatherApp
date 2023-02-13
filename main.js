@@ -3,7 +3,7 @@ import "./sass/main.scss";
 let cityForm = document.querySelector(".weather__form");
 let cityInput = document.querySelector(".weather__city");
 let APIURL =
-  "https://api.weatherapi.com/v1/current.json?key=d65612371be147b590e171953221512&aqi=yes&q=";
+  "http://api.weatherapi.com/v1/current.json?key=d65612371be147b590e171953221512&aqi=yes&q=";
 let apiView = document.querySelector(".weather__data");
 let video = document.querySelector(".weather__bg");
 let loader = document.querySelector(".weather__loader");
