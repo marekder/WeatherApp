@@ -10,7 +10,7 @@ let loader = document.querySelector(".weather__loader");
 
 cityForm.addEventListener("submit", (event) => {
   let city = cityInput.value;
-  console.log(city);
+  // console.log(city);
   if (city.length <= 3) {
     showError();
     cityInput.classList.add("weather__city--error");
@@ -30,7 +30,7 @@ cityForm.addEventListener("submit", (event) => {
         }
       })
       .then((dataFromAPI) => {
-        console.log(dataFromAPI.current.temp_c);
+        // console.log(dataFromAPI.current.temp_c);
         let view = "";
         // view += `<b>${dataFromAPI.current.temp_c}</b>`
         view += `<div class="weather__location">City: ${dataFromAPI.location.name} - Country: ${dataFromAPI.location.country}</div>`;
@@ -58,7 +58,7 @@ cityForm.addEventListener("submit", (event) => {
         // video.setAttribute('src', '/video/' + dataFromAPI.current.condition.code + '.mp4')
         // video.play()
       });
-    console.log(APIURLWITHCITY);
+    // console.log(APIURLWITHCITY);
   }
 
   event.preventDefault();
